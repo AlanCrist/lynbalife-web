@@ -1,14 +1,13 @@
 import React from "react";
 import Header from './components/Header';
-import Main from './pages/main'
-import Login from './pages/login'
+import { Routes } from './routes';
 import './styles.css';
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Routes />
     </>
   );
 }
