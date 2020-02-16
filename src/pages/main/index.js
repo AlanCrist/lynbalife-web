@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { api } from "../../services/api";
 import { Button } from "@material-ui/core";
+import { Link } from 'react-router-dom';
 
 export default function Main() {
     const [products, setProducts] = useState([])
@@ -45,7 +46,7 @@ export default function Main() {
                 <article className={classes.conteudo} key={product._id}>
                     <strong>{product.title}</strong>
                     <p className={classes.description}>{product.description}</p>
-                    <a className={classes.link} href="#">Acessar</a>
+                    <Link className={classes.link} to={`/products/${product._id}`}>Acessar</Link>
                 </article>
             ))}
             <div className={classes.actions}>
